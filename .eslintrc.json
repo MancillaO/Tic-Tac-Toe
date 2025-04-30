@@ -1,0 +1,51 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "standard",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "react-refresh"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "ignorePatterns": [
+    "*.test.js",
+    "/ecosystem.config.js",
+    "/autoScaler.js",
+    "/vitest.config.js",
+    "*.yml"
+  ],
+  "rules": {
+     "react/prop-types": "off",
+    "complexity": [
+      "error",
+      {
+        "max": 30
+      }
+    ],
+    "camelcase": "off",
+    "no-console": "off",
+    "react-refresh/only-export-components": [
+      "warn",
+      { "allowConstantExport": true }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
